@@ -66,4 +66,25 @@ Pode-se informar um nome diferente para chave, ao invés de id_rsa.
 
 * ssh-copy-id usuario@ip.host.remoto
 
+# O comando apt
+
+O comando apt é utilizada em distribuições **debian-based** para gerenciar os pacotes do sistema
+
+* apt-get update: atualiza as versões dos pacotes a partir da source-list
+* apt-get upgrade: atualiza os pacotes do sistema
+* apt-get install <pacote>: instala o pacote
+* apt-get remove <pacote>: remove o pacote
+* apt-get purge <pacote>: remove o pacote, e arquivos de cache que o pacote pode gerar na instalação
+* apt-cache search <termo>: busca pacotes que tenham o nome ou descrição informado
+* apt-cache search -n <termo>: buca pacotes que tenham o nome informado.
+* apt-cache show <pacote>: mostra informações do pacote
+* apt-get install -d <pacote>: baixa o pacote, não instala
+
+## Fonte dos pacotes
+
+Os pacotes são buscados dos repositórios informados na source-list:
+* /etc/apt/sources.list
+
+Após adicionar um repositório na source-list, deve rodar o apt-get update
+
 
