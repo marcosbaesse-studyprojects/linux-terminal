@@ -87,4 +87,18 @@ Os pacotes são buscados dos repositórios informados na source-list:
 
 Após adicionar um repositório na source-list, deve rodar o apt-get update
 
+#Usuários grupos permissões
 
+Comandos para gerenciar grupos e usuários:
+
+* adduser <usuario>: Cria o usuário, diretório, senha e grupo
+* useradd <usuario>: Apenas o usuário, sem as configurações
+* su - <usuario>: troca a sessão do usuario, no termial
+* passwd: troca a senha do usuário da sessão atual
+* passwd <usuario>: troca a senha do usuário informado
+* cat /etc/passwd: mostra todos os usuários do sistema, e suas devidas informações de acesso
+* cat /etc/shadow: mostra a senha (criptografada) dos usuários
+* deluser <usuario>: deleta o usuário
+* deluser <usuario> --remove-home: deleta o usuário e a pasta home
+* deluser <usuario> --backup: deleta o usuário, mas cria um arquivo de backup das informações e configurações do usuário deletado.
+* adduser <usuario> <grupo>: Adiciona o usuário a um grupo.
