@@ -48,4 +48,22 @@ No arquivo de configuração do ssh
 
 Então, após reiniciar o serviço do ssh (sshd), ele aceitará o login apenas das chaves públicas informadas.
 
+# Acesso por SSH no Linux
+
+O linux não necessita do putty para se realizar o acesso por ssh, pois ele já possui o ssh nativo:
+
+* ssh usuario@ip.host.remoto
+
+## Para gerar a chave no linux
+
+* ssh-keygen
+
+a chave fica armazenada em: ```/home/usuario/.ssh/id_rsa```
+
+Pode-se informar um nome diferente para chave, ao invés de id_rsa.
+
+## Para informar a chave para o servidor, sem alterar o arquivo de chaves autrizadas diretamente:
+
+* ssh-copy-id usuario@ip.host.remoto
+
 
